@@ -1,1 +1,1 @@
-https://github.com/gremushka/slozhno-sosredotochitsya.git
+https://github.com/gremushka/zakrivayuschiy-teg-f.git
