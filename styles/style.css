@@ -1,11 +1,12 @@
 /* Здесь вы напишете основную часть стилей страницы.
 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, 
+чтобы в HTML некоторые классы были названы особым образом:
+
 ✦ theme-dark — класс тёмной темы
 ✦ theme-light — класс светлой темы
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
@@ -15,6 +16,399 @@
 */
 
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
+  min-inline-size: 375px;
+  max-inline-size: 700px;
+  width: clamp(375px, 50%, 700px); 
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--main-font), sans-serif;
+  background: var(--background-stripes);
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+.header{
+  margin: 6.25rem 0;
+  font-family: var(--accent-font), monospace;
+  font-weight: bold;
+  border: 2px solid var(--main-text-color);
+  background-color: var(--main-bg-color);
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.logo-group{
+  justify-self: center;
+  align-self: center;
+  padding:  clamp(7.5rem, 32%, 8.5rem) clamp(0.875rem, 0.037%, 7.53125rem) 0;
+  text-align: center;
+ 
+}
+h1{
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  color:var(--main-text-color);
+  line-height: 1em;
+}
+.subheader{
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  color:var(--main-text-color);
+  text-transform: uppercase;
+  padding-top: 20px;
+
+}
+.theme-menu{
+  justify-self: center;
+  width: min-content;
+  padding: 25px 0;
+  color: var(--main-text-color);
+}
+.theme-menu__list{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.theme-menu__item {
+  position: relative;
+  padding-inline-start: 21px;
+}
+.theme-menu__button {
+  border: none;
+  transition: opacity 0.3s;
+  animation-timing-function: ease-in-out;
+  color: var(--main-text-color);
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 14px;      
+  line-height: 1em;
+}
+.theme-menu__button:disabled{
+  opacity: 0.6;
+  pointer-events: none;
+}
+.theme-menu__button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.theme-menu__button:focus {
+  outline: none;
+}
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+}
+
+.theme-menu__button:disabled::before {
+  position: absolute;
+  top:2px;
+  left:-90px;
+  content: "▶";
+  color: var(--main-text-color);
+  animation: arrow_moves 0.5s infinite;
+  animation-duration: alternate;
+  animation-timing-function: ease-in-out;
+  font-size: 1em;
+  line-height: 1em;
+}
+main li{
+  margin-bottom:50px;
+}
+main article{
+  background-color: var(--main-bg-color);
+  border: 2px solid var(--main-text-color);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+article h2{
+  font-size: 18px;
+  height:31px;
+  line-height: 31px;
+  padding-left: 10px;
+  font-weight: var( --header-font-weight);
+  border-bottom: 2px solid var(--main-text-color);
+  color: var(--main-text-color);
+}
+article img{
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+article .content{
+  border-top: 2px solid var(--main-text-color);
+  padding: 25px;
+  display: grid;
+  
+}
+article p{
+  display: block;
+  color: var(--main-text-color);
+  font-size: 18px;
+  line-height: 21px;
+  padding-bottom: 25px;
+}
+
+article .card__icon-button {
+  background-color: transparent;
+  padding: 0;
+  color: transparent;
+  transition: color 0.3s ease;
+  outline: 2px solid;
+  border: none;
+}
+article .card__icon-button:focus-visible {
+  color: var(--main-text-color);
+  outline: 2px solid var(--main-text-color);
+}
+
+article .card__like-button{
+  justify-self:end;
+  position: relative;
+  align-content: end;
+  font-family: var(--accent-font), monospace;
+  cursor: pointer;
+  block-size: 38px;
+  inline-size: 130px;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform:capitalize;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  transition: box-shadow 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+
+article .card__like-button::after {
+  mix-blend-mode: difference;
+  content: '';
+  position: absolute;
+  transform: scaleX(0);
+  block-size: 55px;
+  inline-size: 130px;
+  bottom: -16px;
+  right: -100%;
+  left: 0;
+  background-color: var(--like-button);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+article .card__like-button:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+  background-color: var(--like-button);
+  right:0;
+}
+
+article .illustration{
+  position: relative;
+}
+
+
+.watermark{
+  font-family: var(--accent-font), monospace;
+  position: absolute;
+  font-size: 14px;
+  mix-blend-mode:hard-light;
+  opacity: 0.5;
+  top:25px;
+  right: 13px;
+  text-shadow:
+    -1px 0 var(--watermark-stroke), 
+   0 1px var(--watermark-stroke), 
+   1px 0 var(--watermark-stroke), 
+   0 -1px var(--watermark-stroke);
+
+}
+
+
+@supports((text-stroke: 1px var(--watermark-stroke)) or (-webkit-text-stroke: 1px var(--watermark-stroke))) {
+  .watermark {
+        font-family: var(--accent-font), monospace;
+        color: var(--main-text-color);
+        position: absolute;
+        opacity: 0.5;
+        font-size: 14px;
+        mix-blend-mode:hard-light;
+        top:25px;
+        right: 25px;
+        -webkit-text-stroke: 1px var(--watermark-stroke);
+        text-stroke: 1px var(--watermark-stroke);
+        text-shadow: none;
+    }
+}
+
+
+.button-block {
+  display: grid;
+  grid-template-columns: min-content  min-content;
+  justify-content: end;
+  gap: 8px;
+  align-items: center;
+  padding-block-end: 25px;
+  padding-inline-end: 25px;
+}
+/*- Кнопки ------------------------------------------------- */
+.button {
+  display: grid;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-bg-color);
+  border: none;
+  outline: 2px solid var(--main-text-color);
+  font-family: var(--accent-font), sans-serif;
+  transition: box-shadow 0.5s;
+  cursor: pointer;
+  overflow: hidden;
+  font-weight: 400;
+}
+.button:focus {
+  border: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0px 2px var(--main-text-color);
+  outline: 2px solid var(--main-text-color);
+}
+.button span {
+  z-index: 1;
+  position: relative;
+  font-size: 14px;
+  color: var(--like-button);
+  mix-blend-mode: difference;
+}
+.button::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: var(--main-text-color);
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+  position: absolute;
+}
+.button:hover::after {
+  cursor: pointer;
+  transform: translateX(0);
+}
+.floppy-svg {
+  z-index: 1;
+  width: 21px;
+  position: relative;
+  fill: var(--like-button);
+  mix-blend-mode: difference;
+}
+
+.dialog_button{
+  grid-template-columns: 21px 1fr;
+  gap: 12px;
+  width: 340px;
+  height: 55px;
+  line-height: 12.6px;
+  font-size: 14px;
+  margin: 50px auto 103px;
+  padding: 15px 18px 14px;
+}
+
+/*- блок лайков ------------------------------------------------- */
+
+/*- Модальное окно ------------------------------------------------- */
+.modal {
+  background-color: var(--main-bg-color);
+  border: none;
+  border: 2px solid var(--main-text-color);
+  color: var(--main-text-color);
+  font-family: var(--accent-font), sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 0px;
+}
+.modal .content {
+  display: grid;
+  grid-template-columns: 39px 1fr;
+  gap: 20px;
+  align-content: center;
+  justify-content: center;
+}
+.modal svg{
+  color: var(--main-text-color);
+  z-index: 1;
+  width: 39px;
+  position: relative;
+}
+.modal {
+  color: var(--main-text-color);
+  z-index: 1;
+
+}
+
+
+.modal::backdrop {
+  background-color: rgb(0, 0, 0, 0.75);
+}
+
+.modal button {
+  text-transform: uppercase;
+  height: 38px;
+  width: 293px;
+  padding: 0px;
+}
+
+.modal:is([open]) form {
+  display: grid;
+  gap: 30px;
+  align-self: center;
+
+}
+
+.modal:is([open]) .floppy {
+  width: 39px; 
+  align-self: center;
+  fill: var(--main-text-color);
+}
+
+.modal form {
+  padding: 30px;
+}
+
+.modal span {
+  display: block;
+  max-width: 200px;
+  line-height: 21px;
+}
+/*- Фильтры ------------------------------------------------- */
+
+.filter-saturate-rotate {
+  filter: saturate(230%) hue-rotate(200deg);
+}
+
+
+.filter-saturate {
+  filter: saturate(120%);
+}
+
+.filter-blur {
+  filter: blur(4px);
+}
+
+
+.filter-sepia-opacity-blur {
+  filter: sepia(0.45) opacity(0.3) blur(5px) ;
+}
+
+
+.filter-hue-rotate{
+  filter: hue-rotate(20deg);
+}
+.filter-contrast {
+  filter: contrast(40%);
+}
+.filter-invert-blur {
+  filter: invert(100%) blur(5px);
+}
+.filter-brightness-grayscale {
+  filter: brightness(30%) grayscale(80);
 }
