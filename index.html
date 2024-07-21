@@ -12,12 +12,7 @@
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link
-      rel="stylesheet"
-      media="(width <= 375px)"
-      href="./styles/mobile.css"
-    />
+    <link rel="stylesheet" href="./styles/style.css" /> 
     <link rel="stylesheet" href="./styles/animations.css" />
 
     <link rel="icon" href="./images/favicon.ico" sizes="any" />
@@ -29,8 +24,8 @@
   <body class="page">
     <header class="header">
       <div class="logo-group">
-        <h1>&lt;/HTML&gt;</h1>
-        <p class="subheader">закрывающий тег</p>
+        <a class="logo">&lt;/HTML&gt;</a>
+        <h1>закрывающий тег</h1>
       </div>
 
       <nav class="theme-menu header__theme-menu">
@@ -64,30 +59,29 @@
         <li>
           <article>
             <h2>Фритрек и нулевой спринт: Подготовка к работе</h2>
-            <div class="illustration filter-saturate-rotate">
-              <div class="watermark">&lt;/MIRACLE&gt;</div>
-              <img src="./images/1.jpg" alt="В ожидании чуда" />
+            <div class="illustration ">
+              <div class="watermark">&lt;/miracle&gt;</div>
+              <img src="./images/1.jpg"  class="filter-saturate-rotate" 
+              alt="Человек смотрит на проносящийся мимо вагон поезда"/>
             </div>
             <div class="content">
               <p>
-                Это было самое начало пути. На этом этапе важно было
-                проникнуться основами и настроиться на учёбу. И, возможно,
-                подумать, как новые знания могут повлиять на ваше будущее.
+                Это было самое начало пути. На этом этапе важно было проникнуться 
+                основами и настроиться на учёбу. И, возможно, подумать, как новые 
+                знания могут повлиять на ваше будущее.
               </p>
               <p>
-                Сменив работу я начал работу над новой веб-системой. Django,
-                Bootstrap и JQuery - страрый проверенный набор. Но кажется пора
-                наконец выучить JS и отказаться от старых библиотек. Я полон
-                надежд, надо только перетерпеть верстку.
+                Новая работа. Новые задачи. Нужен новый подход к построению интерфейсов. 
+                Пора наконец выучить JS.
               </p>
             </div>
             <div class="button-block">
-              <button class="card__icon-button" type="button">
+              <button class="card__icon-button " type="button">
                 <svg
                   class="like-icon"
                   width="39"
-                  height="36"
-                  viewBox="0 0 39 39"
+                  height="39"
+                  viewBox="0 0 36 32"
                   fill="none"
                 >
                   <g class="heart">
@@ -137,32 +131,31 @@
         <li>
           <article>
             <h2>1 спринт: Я — чистый лист</h2>
-            <div class="illustration filter-saturate">
-              <div class="watermark">&lt;/PAPER&gt;</div>
-              <img src="./images/2.jpg" alt="Белый лист" />
+            <div class="illustration ">
+              <div class="watermark">&lt;/paper&gt;</div>
+              <img src="./images/2.jpg"  class="filter-saturate" 
+              alt="Лист бумаги на столе, рядом много атрибутов путешественника"/>
             </div>
             <div class="content">
               <p>
-                На первых этапах мы работали со страхами и сомнениями, которые
-                часто испытывают новички. Один из них — страх перед чистым
-                листом. Это, конечно же, намного сложнее, чем боязнь куска
-                бумаги. Часто за этим ощущением скрываются более глубокие
-                вопросы: с чего начать? а вдруг будет слишком сложно? что, если
-                я не справлюсь?
+                На первых этапах мы работали со страхами и сомнениями, 
+                которые часто испытывают новички. Один из них — страх перед чистым листом.
+                 Это, конечно же, намного сложнее, чем боязнь куска бумаги. 
+                 Часто за этим ощущением скрываются более глубокие вопросы: 
+                 с чего начать? а вдруг будет слишком сложно? что, если я не справлюсь?
               </p>
               <p>
-                Я не новичок. Моя первая верстка была во времена Netscape
-                Navigator, но что изменилось. Вроде многое, но идеологически
-                почти ничего.
-              </p>
+                Вот это все вверху не про меня. Да я не верстал уже лет 10, 
+                обходясь для рабочих задач BOOTSTRAP. Но многолетний опыт всегда со мной.
+                Прорвемся.            </p>
             </div>
             <div class="button-block">
-              <button class="card__icon-button" type="button">
+              <button class="card__icon-button " type="button">
                 <svg
                   class="like-icon"
                   width="39"
-                  height="36"
-                  viewBox="0 0 39 39"
+                  height="39"
+                  viewBox="0 0 36 32"
                   fill="none"
                 >
                   <g class="heart">
@@ -212,28 +205,35 @@
         <li>
           <article>
             <h2>1 спринт: А если не получится?</h2>
-            <div class="illustration filter-blur">
-              <div class="watermark">&lt;/IF&gt;</div>
-              <img src="./images/3.jpg" alt="Если не получится" />
+            <div class="illustration ">
+              <div class="watermark">&lt;/work&gt;</div>
+              <img src="./images/3.jpg"  class="filter-blur" 
+              alt="Человек смотрит на игральные автоматы, расплывчато"/>
             </div>
             <div class="content">
               <p>
-                Первый проект — позади! Но это всё ещё самое начало пути.
-                Радость могла быстро померкнуть и смениться ожиданием провала.
+                Первый проект — позади! Но это всё ещё самое начало пути. 
+                Радость могла быстро померкнуть и смениться ожиданием провала. 
                 Или вы, наоборот, могли вдохновиться успехами и поверить в себя.
               </p>
               <p>
-                Первый проект был достаточно простой. Флексы и гриды - отличные
-                инструменты, я ушел из верстки когда их еще не было.
+                Проект как проект. Напрягает невозможность уточнить что имел ввиду дизайнер.
+                Раздражает однозначность ревьюеров в спорных ситуациях. Например запрет на использование
+                 &lt;EM&gt; как "не семантичного, а тега представления". Я аж кофе поперхнулся.
+    
+              </p>
+              <p>
+                 Кстати, в текущей спецификации тегам &lt;i&gt; и &lt;b&gt;, и которых в наше время все избегали,
+                 вновь присвоена семантика. Это цирк продолжается спусты много лет как я оттуда ушел.
               </p>
             </div>
             <div class="button-block">
-              <button class="card__icon-button" type="button">
+              <button class="card__icon-button " type="button">
                 <svg
                   class="like-icon"
                   width="39"
-                  height="36"
-                  viewBox="0 0 39 39"
+                  height="39"
+                  viewBox="0 0 36 32"
                   fill="none"
                 >
                   <g class="heart">
@@ -283,27 +283,31 @@
         <li>
           <article>
             <h2>2 спринт: Погоня за идеалом</h2>
-            <div class="illustration filter-sepia-opacity-blur">
-              <div class="watermark">&lt;/RUNNING&gt;</div>
-              <img src="./images/4.jpg" alt="Бег" />
+            <div class="illustration ">
+              <div class="watermark">&lt;/run&gt;</div>
+              <img src="./images/4.jpg"  class="filter-sepia-opacity-blur" 
+              alt="Человек бежит по беговой дорожке, видны только ноги"/>
             </div>
             <div class="content">
               <p>
                 На этом этапе вы уже достаточно разбирались в основах вёрстки,
-                чтобы понять, как много ещё впереди. Вы могли попытаться
-                погнаться за идеалом и понять, что он недостижим. А, может, вы
-                вовсе и не подвержены перфекционизму и вместо того, чтобы
-                сделать идеально, старались просто сделать.
+                 чтобы понять, как много ещё впереди. Вы могли попытаться погнаться 
+                 за идеалом и понять, что он недостижим. А, может, вы вовсе и не 
+                 подвержены перфекционизму и вместо того, чтобы сделать идеально, 
+                 старались просто сделать.
               </p>
-              <p>Верстка это то что нужно пережить на пути к цели.</p>
+              <p>
+                Дела надо делать, не до перфекционизма. Выкраивать время от работы - сложно.
+                Проекты обьемнее чем в курсе PostgreSql.
+              </p>
             </div>
             <div class="button-block">
-              <button class="card__icon-button" type="button">
+              <button class="card__icon-button " type="button">
                 <svg
                   class="like-icon"
                   width="39"
-                  height="36"
-                  viewBox="0 0 39 39"
+                  height="39"
+                  viewBox="0 0 36 32"
                   fill="none"
                 >
                   <g class="heart">
@@ -353,31 +357,32 @@
         <li>
           <article>
             <h2>2 спринт: О тех, кто рядом</h2>
-            <div class="illustration filter-hue-rotate">
-              <div class="watermark">&lt;/AROUND&gt;</div>
-              <img src="./images/5.jpg" alt="Кто рядом" />
+            <div class="illustration ">
+              <div class="watermark">&lt;/info&gt;</div>
+              <img src="./images/5.jpg"  class="filter-hue-rotate" 
+              alt="Люди стоящие у надписи PASSION LED US HERE"/>
             </div>
             <div class="content">
               <p>
-                Всё это время вы были не одиноки (хотя, возможно, иногда и
-                чувствовали, что одни против целого мира). Вас окружали
-                одногруппники, команда сопровождения и просто близкие люди,
-                которым можно пожаловаться, если очередной макет просто так не
-                поддавался. Осваивать что-то новое легче, когда рядом есть
-                единомышленники, не правда ли?
+                Всё это время вы были не одиноки (хотя, возможно, иногда и чувствовали,
+                 что одни против целого мира). Вас окружали одногруппники,
+                  команда сопровождения и просто близкие люди, которым можно
+                   пожаловаться, если очередной макет просто так не поддавался.
+                    Осваивать что-то новое легче, когда рядом есть единомышленники,
+                     не правда ли?
               </p>
               <p>
-                Мой проект переходит в стадию внедрения. Время начинает
-                исчезать, но я справляюсь.
+                Огромный поток информации. Я восхищаюсь теми кто решился с нуля идти на этот курс - это супер герои.
+                Правда боюсь дойдет 1 из 10.
               </p>
             </div>
             <div class="button-block">
-              <button class="card__icon-button" type="button">
+              <button class="card__icon-button " type="button">
                 <svg
                   class="like-icon"
                   width="39"
-                  height="36"
-                  viewBox="0 0 39 39"
+                  height="39"
+                  viewBox="0 0 36 32"
                   fill="none"
                 >
                   <g class="heart">
@@ -427,28 +432,29 @@
         <li>
           <article>
             <h2>3 спринт: Обходные стратегии</h2>
-            <div class="illustration filter-contrast">
-              <div class="watermark">&lt;/STRATEGY&gt;</div>
-              <img src="./images/6.jpg" alt="Различные стратегии" />
+            <div class="illustration ">
+              <div class="watermark">&lt;/strategy&gt;</div>
+              <img src="./images/6.jpg"  class="filter-contrast" 
+              alt="Фигурки лего, клоны из звездных войн между которыми стоит Пьеро"/>
             </div>
             <div class="content">
               <p>
-                На этом курсе вы постоянно решали разные задачи. В какой-то
-                момент вам могло показаться, что решения просто иссякли. Значит,
-                пришло время посмотреть на задачу под другим углом.
+                На этом курсе вы постоянно решали разные задачи. В какой-то момент
+                 вам могло показаться, что решения просто иссякли. Значит, пришло 
+                 время посмотреть на задачу под другим углом.
               </p>
               <p>
-                Адаптивность не новость для меня, но практики нехватает -
-                задание затягивается.
+                Задания делаются в последний момент. Работа просто забирает кучу времени.
+                Все срочно. Нервы не к черту.
               </p>
             </div>
             <div class="button-block">
-              <button class="card__icon-button" type="button">
+              <button class="card__icon-button " type="button">
                 <svg
                   class="like-icon"
                   width="39"
-                  height="36"
-                  viewBox="0 0 39 39"
+                  height="39"
+                  viewBox="0 0 36 32"
                   fill="none"
                 >
                   <g class="heart">
@@ -498,31 +504,31 @@
         <li>
           <article>
             <h2>3 спринт: Когда опускаются руки</h2>
-            <div class="illustration filter-invert-blur">
-              <div class="watermark">&lt;/DESPAIR&gt;</div>
-              <img src="./images/7.jpg" alt="отчаяние" />
+            <div class="illustration ">
+              <div class="watermark">&lt;/fail&gt;</div>
+              <img src="./images/7.jpg"  class="filter-invert" 
+              alt="Стул лежащий на поляне, изображение инвертировано"/>
             </div>
             <div class="content">
               <p>
-                Во время учёбы часто возникает чувство, когда не знаешь, за что
-                хвататься. Вроде и проектную пора сдавать, и задачи хочется
-                порешать, и в теории получше разобраться, и жизнь не забыть
-                пожить. В такие моменты очень нужна концентрация. Вспомните,
-                откуда вы её черпали.
+                Во время учёбы часто возникает чувство, когда не знаешь, 
+                за что хвататься. Вроде и проектную пора сдавать, и задачи 
+                хочется порешать, и в теории получше разобраться, и жизнь не 
+                забыть пожить. В такие моменты очень нужна концентрация. 
+                Вспомните, откуда вы её черпали.
               </p>
               <p>
-                Я в полном отчаянии. В моем проекте 50 аккаунтов и 2000
-                документов в опытной эксплуатации. Времени нет, я не справляюсь
-                - перехожу в другой поток. Это удар.
+                Вот я и не успеваю сдать проект ПР4. Все я ухайдохался. Беру огромный перерыв чтобы отдохнуть ... И трачу его на работу. 
+                Похоже моей задачей стало сложить слово "СЧАСТЬЕ" из букв "О", "П", "Ж" и "А".
               </p>
             </div>
             <div class="button-block">
-              <button class="card__icon-button" type="button">
+              <button class="card__icon-button " type="button">
                 <svg
                   class="like-icon"
                   width="39"
-                  height="36"
-                  viewBox="0 0 39 39"
+                  height="39"
+                  viewBox="0 0 36 32"
                   fill="none"
                 >
                   <g class="heart">
@@ -572,35 +578,34 @@
         <li>
           <article>
             <h2>«Сейчас я здесь»</h2>
-            <div class="illustration filter-brightness-grayscale">
-              <div class="watermark">&lt;/HERE&gt;</div>
-              <img src="./images/8.jpg" alt="Здесь и сейчас" />
+            <div class="illustration ">
+              <div class="watermark">&lt;/here&gt;</div>
+              <img src="./images/8.jpg"  class="filter-brightness-grayscale" 
+              alt="Ноги человека стоящего на круге с надписью 'Вы здесь'"/>
             </div>
             <div class="content">
               <p>
-                Сейчас вы уже очень много знаете о вёрстке. Но это только
-                начало. Во-первых, впереди ещё много материала про «красотищу».
-                Во-вторых, с окончанием курса учёба не заканчивается. Вёрстка —
-                это целый мир. И этот мир постоянно меняется. Познать его
-                полностью не получится, но это тот случай, когда важен сам
-                процесс познания. Ведь часто путь — и есть результат.
+                Сейчас вы уже очень много знаете о вёрстке. Но это только начало.
+                 Во-первых, впереди ещё много материала про «красотищу». 
+                 Во-вторых, с окончанием курса учёба не заканчивается. 
+                 Вёрстка — это целый мир. И этот мир постоянно меняется. 
+                 Познать его полностью не получится, но это тот случай, 
+                 когда важен сам процесс познания. Ведь часто путь — и есть результат.
               </p>
               <p>
-                "Красотища" убивает. огромное количество бесполезного для моих
-                задач материала. Передышка при смене спринта закончилась
-                незаметно и вот я опять перед стеной проекта. Трудно даже
-                подойти и начать. Я скован. Накатывает отчаяние. Надеюсь что это
-                пройдет при изучении JS, в курсе про POSTGRESQL все таки было
-                проще.
+                Я сделал ПР4, вложив себя в 14 часовой спринт. Я был на подьеме повно до момент получения замечаний.
+                Я все таки пока не смог. В проекте слишком много деталей для одного однодневного спринта. Глаз замыливается.
+                Отправляю версию 2.
               </p>
+              <p>Тем временем шутки про антидепресанты перестали быть шутками... :/</p>
             </div>
             <div class="button-block">
-              <button class="card__icon-button" type="button">
+              <button class="card__icon-button " type="button">
                 <svg
                   class="like-icon"
                   width="39"
-                  height="36"
-                  viewBox="0 0 39 39"
+                  height="39"
+                  viewBox="0 0 36 32"
                   fill="none"
                 >
                   <g class="heart">
@@ -648,15 +653,13 @@
           </article>
         </li>
       </ul>
-    </main>
-    <footer>
       <button
         class="dialog_button button"
         type="button"
         onclick="window['dialog'].showModal()"
         aria-controls="dialog"
       >
-        <svg class="floppy-svg" viewBox="0 0 29 29">
+        <svg class="floppy-svg" width="21" viewBox="0 0 29 29">
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <span>Сохранить на память</span>
@@ -673,7 +676,7 @@
           <button class="button" type="submit"><span>ок</span></button>
         </form>
       </dialog>
-    </footer>
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
